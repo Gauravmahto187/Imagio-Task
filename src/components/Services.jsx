@@ -3,8 +3,10 @@ import servicesImage from '../assets/Services.jpg'
 import service1Image from '../assets/Service-1.jpg'
 import service2Image from '../assets/Service-2.jpg'
 import service3Image from '../assets/Service-3.jpg'
-import logoImage from '../assets/Nav-repa-logo.png'
+import logoImage from '../assets/Logo.png'
 import Arrow from '../assets/Arrow.png'
+import Vector from '../assets/Vector2.png'
+
 
 const Services = () => {
   const programs = [
@@ -40,8 +42,8 @@ const Services = () => {
           className="relative w-full max-w-[1780px] mx-auto overflow-hidden"
           style={{ 
             borderRadius: '20px',
-            height: 'auto',
-            minHeight: '500px'
+            height: '600px',
+            minHeight: '300px'
           }}
         >
           {/* Background Image */}
@@ -55,9 +57,9 @@ const Services = () => {
           <div className="absolute inset-0 bg-black/20" />
 
           {/* Content Container */}
-          <div className="relative z-10 flex flex-col lg:flex-row items-start justify-between p-8 sm:p-12 lg:p-16 min-h-[500px] lg:min-h-[600px] xl:min-h-[700px]">
+          <div className="relative  z-10 flex flex-col lg:flex-row items-start justify-between p-8 sm:p-12 lg:p-16 min-h-[500px] lg:min-h-[600px] xl:min-h-[700px]">
             {/* Left Content */}
-            <div className="flex flex-col">
+            <div className="flex flex-col ">
               {/* Section Label */}
               <p className="text-white/80 tracking-[0.2em] text-xs font-medium mb-4">
                 OUR SERVICES
@@ -66,13 +68,13 @@ const Services = () => {
               {/* Main Heading */}
               <h2 
                 className="text-white text-4xl sm:text-5xl lg:text-6xl mb-2 leading-tight"
-                style={{ fontFamily: "'Cormorant Garamond', Georgia, serif" }}
+                style={{ fontFamily: "Canela Trial" }}
               >
                 Repa Retreat
               </h2>
               <h3 
                 className="text-white text-3xl sm:text-4xl lg:text-5xl italic mb-8 lg:mb-12"
-                style={{ fontFamily: "'Cormorant Garamond', Georgia, serif" }}
+                style={{ fontFamily: "Canela Trial" }}
               >
                 Service
               </h3>
@@ -141,43 +143,32 @@ const Services = () => {
         className="relative w-full overflow-hidden py-12 lg:py-16"
         style={{ backgroundColor: '#F5F0E8' }}
       >
-        {/* Decorative Wavy Line - Right Side */}
-        <svg 
-          className="absolute hidden lg:block pointer-events-none"
+        <div 
+          className="absolute lg:block pointer-events-none"
           style={{
-            width: '120px',
-            height: '100%',
+            right: '0',
             top: '0',
-            right: '40px'
+            height: '100%',
+            transformOrigin: 'center left',
+            width: 'auto',
+            zIndex: 1
           }}
-          viewBox="0 0 120 400"
-          fill="none"
-          preserveAspectRatio="none"
-          xmlns="http://www.w3.org/2000/svg"
         >
-          <path 
-            d="M 60 0 
-               C 100 50, 20 100, 60 150 
-               C 100 200, 20 250, 60 300 
-               C 100 350, 40 380, 60 400"
-            stroke="url(#waveGradient)"
-            strokeWidth="35"
-            strokeLinecap="round"
-            fill="none"
+          <img
+            src={Vector}
+            alt="Decorative vector"
+            className="h-full w-auto"
+            style={{ 
+              maxWidth: '150px',
+              display: 'block'
+            }}
           />
-          <defs>
-            <linearGradient id="waveGradient" x1="0%" y1="0%" x2="0%" y2="100%">
-              <stop offset="0%" stopColor="#A66D35" stopOpacity="0.2" />
-              <stop offset="50%" stopColor="#A66D35" stopOpacity="0.45" />
-              <stop offset="100%" stopColor="#A66D35" stopOpacity="0.5" />
-            </linearGradient>
-          </defs>
-        </svg>
+        </div>
 
         {/* Content */}
         <div className="relative z-10 flex flex-col items-center justify-center px-4 max-w-4xl mx-auto">
           {/* Logo Icon */}
-          <div className="mb-6" style={{ width: '50px', height: '62px' }}>
+          <div className="mb-4" style={{ width: '60px', height: '60px' }}>
             <img
               src={logoImage}
               alt="Repa Retreat Logo"
@@ -187,8 +178,8 @@ const Services = () => {
 
           {/* Quote Text */}
           <p 
-            className="text-center text-[#3D3D3D] text-xl sm:text-2xl lg:text-[28px] leading-relaxed italic"
-            style={{ fontFamily: "'Cormorant Garamond', Georgia, serif" }}
+            className="text-center text-[#3D3D3D] text-xl sm:text-2xl lg:text-[28px] leading-relaxed font-normal"
+            style={{ fontFamily: "Canela Trial" }}
           >
             Immerse yourself in your spiritual journey and 
             experience the supportive energy of the hills and 

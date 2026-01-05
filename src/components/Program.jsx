@@ -2,6 +2,7 @@ import React from 'react'
 import programImage1 from '../assets/program-1.jpg'
 import programImage2 from '../assets/program-2.jpg'
 import logoImage from '../assets/Nav-repa-logo.png'
+import Arrow from '../assets/Arrow.png'
 
 const Program = () => {
   return (
@@ -49,19 +50,6 @@ const Program = () => {
                 alt="Monks in meditation practice"
                 className="w-full h-[400px] sm:h-[500px] lg:h-[550px] object-cover"
               />
-              
-              {/* Logo Watermark - Bottom Left of Image */}
-              <div className="absolute bottom-6 left-6 flex items-center gap-2">
-                <img
-                  src={logoImage}
-                  alt="Repa Retreat"
-                  className="w-8 h-10 object-contain opacity-80"
-                />
-                <div className="text-white/80">
-                  <p className="text-xs font-medium">Repa</p>
-                  <p className="text-xs font-medium -mt-1">Retreat</p>
-                </div>
-              </div>
             </div>
           </div>
 
@@ -74,11 +62,11 @@ const Program = () => {
           >
             {/* Card Title */}
             <h4 
-              className="text-2xl sm:text-3xl text-[#2D2D2D] mb-4"
+              className="text-2xl sm:text-3xl text-[#2D2D2D] mb-4 font-extrabold"
               style={{ fontFamily: "'Cormorant Garamond', Georgia, serif" }}
             >
               Preliminary{' '}
-              <span className="italic text-[#C17F24]">Practices</span>
+              <span className="italic text-gray-500">Practices</span>
             </h4>
 
             {/* Card Description */}
@@ -89,13 +77,7 @@ const Program = () => {
             {/* Learn More Button */}
             <div className="flex items-center gap-3 cursor-pointer group">
               <div className="w-6 h-6 rounded-full bg-[#C17F24] flex items-center justify-center group-hover:bg-[#a66a1c] transition-colors duration-300">
-                <svg 
-                  className="w-2 h-2 text-white ml-0.5" 
-                  fill="currentColor" 
-                  viewBox="0 0 24 24"
-                >
-                  <path d="M8 5v14l11-7z"/>
-                </svg>
+                <img src={Arrow} alt="Arrow" className="w-6 h-6" />
               </div>
               <span className="text-[#2D2D2D] tracking-[0.15em] text-xs font-semibold group-hover:text-[#C17F24] transition-colors duration-300">
                 LEARN MORE
@@ -139,11 +121,11 @@ const Program = () => {
           >
             {/* Card Title */}
             <h4 
-              className="text-2xl sm:text-3xl text-[#2D2D2D] mb-4"
+              className="text-2xl sm:text-3xl text-[#2D2D2D] mb-4 font-extrabold"
               style={{ fontFamily: "'Cormorant Garamond', Georgia, serif" }}
             >
               Advanced{' '}
-              <span className="italic text-[#C17F24]">Practices</span>
+              <span className="italic text-gray-500">Practices</span>
             </h4>
 
             {/* Card Description */}
@@ -154,13 +136,7 @@ const Program = () => {
             {/* Learn More Button */}
             <div className="flex items-center gap-3 cursor-pointer group">
               <div className="w-6 h-6 rounded-full bg-[#C17F24] flex items-center justify-center group-hover:bg-[#a66a1c] transition-colors duration-300">
-                <svg 
-                  className="w-2 h-2 text-white ml-0.5" 
-                  fill="currentColor" 
-                  viewBox="0 0 24 24"
-                >
-                  <path d="M8 5v14l11-7z"/>
-                </svg>
+              <img src={Arrow} alt="Arrow" className="w-6 h-6" />
               </div>
               <span className="text-[#2D2D2D] tracking-[0.15em] text-xs font-semibold group-hover:text-[#C17F24] transition-colors duration-300">
                 LEARN MORE

@@ -7,6 +7,10 @@ import reviewBg from '../assets/Review-bg.svg'
 import logoImage from '../assets/Nav-repa-logo.png'
 import upcomingImage from '../assets/Upcoming-program.jpg'
 import participationImage from '../assets/Program-participation.jpg'
+import Google from '../assets/Google.png'
+import Arrow from '../assets/Arrow.png'
+import Vector from '../assets/Vector.svg'
+import Join from '../assets/Join.png'
 
 const Accommodation = () => {
   const blocks = [
@@ -28,12 +32,12 @@ const Accommodation = () => {
   ]
 
   return (
-    <section 
-      className="w-full"
-      style={{ backgroundColor: '#F5F0E8' }}
-    >
+    <section className="w-full">
       {/* Accommodation Section */}
-      <div className="py-16 lg:py-24 px-4 sm:px-8 lg:px-[70px]">
+      <div 
+        className="py-16 lg:py-24 px-4 sm:px-8 lg:px-[70px]"
+        style={{ backgroundColor: '#F6F1EA' }}
+      >
         <div className="max-w-[1780px] mx-auto">
           {/* Section Header */}
           <div className="text-center mb-12 lg:mb-16">
@@ -44,10 +48,10 @@ const Accommodation = () => {
 
             {/* Main Title */}
             <h2 
-              className="text-4xl sm:text-5xl lg:text-6xl text-[#2D2D2D]"
-              style={{ fontFamily: "'Cormorant Garamond', Georgia, serif" }}
+              className="text-4xl sm:text-5xl lg:text-6xl text-[#2D2D2D] font-bold"
+              style={{ fontFamily: "Canela Trial" }}
             >
-              <span className="italic">Your Stay</span>
+              <span className="italic font-thin">Your Stay</span>
               {' '}at Repa Retreat
             </h2>
           </div>
@@ -58,7 +62,7 @@ const Accommodation = () => {
               <div 
                 key={block.id} 
                 className="relative overflow-hidden rounded-2xl cursor-pointer group"
-                style={{ aspectRatio: '430/672' }}
+                style={{ aspectRatio: '430/550' }}
               >
                 {/* Image */}
                 <img
@@ -68,7 +72,7 @@ const Accommodation = () => {
                 />
 
                 {/* Gradient Overlay */}
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
+                <div className="absolute inset-0  from-black/60 via-black/20 to-transparent" />
 
                 {/* Text Overlay */}
                 <div className="absolute bottom-8 left-0 right-0 text-center text-white">
@@ -110,6 +114,7 @@ const Accommodation = () => {
                   src={reviewImage}
                   alt="Meditation retreat participant"
                   className="w-full h-auto object-cover"
+                  style={{ maxHeight: '600px' }}
                 />
                 
                 {/* Logo Watermark */}
@@ -130,52 +135,47 @@ const Accommodation = () => {
             {/* Right - Review Content */}
             <div className="w-full lg:w-[55%] lg:max-w-[550px]">
               <div className="flex items-start gap-4">
-                {/* Google Icon */}
-                <div className="flex-shrink-0 mt-1">
-                  <svg className="w-10 h-10" viewBox="0 0 48 48">
-                    <path fill="#FFC107" d="M43.611,20.083H42V20H24v8h11.303c-1.649,4.657-6.08,8-11.303,8c-6.627,0-12-5.373-12-12c0-6.627,5.373-12,12-12c3.059,0,5.842,1.154,7.961,3.039l5.657-5.657C34.046,6.053,29.268,4,24,4C12.955,4,4,12.955,4,24c0,11.045,8.955,20,20,20c11.045,0,20-8.955,20-20C44,22.659,43.862,21.35,43.611,20.083z"/>
-                    <path fill="#FF3D00" d="M6.306,14.691l6.571,4.819C14.655,15.108,18.961,12,24,12c3.059,0,5.842,1.154,7.961,3.039l5.657-5.657C34.046,6.053,29.268,4,24,4C16.318,4,9.656,8.337,6.306,14.691z"/>
-                    <path fill="#4CAF50" d="M24,44c5.166,0,9.86-1.977,13.409-5.192l-6.19-5.238C29.211,35.091,26.715,36,24,36c-5.202,0-9.619-3.317-11.283-7.946l-6.522,5.025C9.505,39.556,16.227,44,24,44z"/>
-                    <path fill="#1976D2" d="M43.611,20.083H42V20H24v8h11.303c-0.792,2.237-2.231,4.166-4.087,5.571c0.001-0.001,0.002-0.001,0.003-0.002l6.19,5.238C36.971,39.205,44,34,44,24C44,22.659,43.862,21.35,43.611,20.083z"/>
-                  </svg>
+                {/* Google Logo - Left Side */}
+                <div className=" mt-18">
+                  <img src={Google} alt="Google" className="w-20 h-20" />
                 </div>
 
                 {/* Review Text */}
-                <div className="flex-1">
+                <div className="flex-1 space-y-4">
                   <p 
-                    className="text-[#5A5A5A] text-sm italic leading-relaxed mb-4"
-                    style={{ fontFamily: "'Cormorant Garamond', Georgia, serif" }}
+                    className="text-[#5A5A5A] text-xl italic leading-relaxed"
+                    style={{ fontFamily: "Inter" }}
                   >
                     Words can hardly describe the incredible time I had at the Repa Retreat. I can warmly recommend this magical place to anyone seeking peace and renewal.
                   </p>
                   <p 
-                    className="text-[#5A5A5A] text-sm italic leading-relaxed"
-                    style={{ fontFamily: "'Cormorant Garamond', Georgia, serif" }}
+                    className="text-[#5A5A5A] text-xl italic leading-relaxed"
+                    style={{ fontFamily: "Inter" }}
                   >
                     The campus is enchanting, and the entire program is designed with so much thought and love, down to the smallest details. The teachers and staff are truly wonderful people who create an atmosphere of care...
                   </p>
-                </div>
-              </div>
 
-              {/* Reviewer Info */}
-              <div className="mt-8 flex items-start gap-3">
-                {/* Closing Quote */}
-                <span 
-                  className="text-[#C17F24] text-4xl leading-none"
-                  style={{ fontFamily: "'Cormorant Garamond', Georgia, serif" }}
-                >
-                  "
-                </span>
-                <div>
-                  <p 
-                    className="text-[#C17F24] text-2xl sm:text-3xl mb-1"
-                    style={{ fontFamily: "'Cormorant Garamond', Georgia, serif" }}
-                  >
-                    Claire Thompson
-                  </p>
-                  <p className="text-[#C17F24] text-xs tracking-wider">
-                    — READ MORE
-                  </p>
+                  {/* Reviewer Info */}
+                  <div className="mt-6 flex items-start gap-3">
+                    {/* Opening Quote */}
+                    <span 
+                      className="text-[#C17F24] text-4xl leading-none"
+                      style={{ fontFamily: "'Cormorant Garamond', Georgia, serif" }}
+                    >
+                      "
+                    </span>
+                    <div>
+                      <p 
+                        className="text-[#C17F24] text-2xl sm:text-3xl mb-1"
+                        style={{ fontFamily: "'Cormorant Garamond', Georgia, serif" }}
+                      >
+                        Claire Thompson
+                      </p>
+                      <p className="text-[#C17F24] text-xs tracking-wider">
+                        — READ MORE
+                      </p>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -192,38 +192,29 @@ const Accommodation = () => {
 
       {/* Upcoming Programs Section */}
       <div className="relative py-16 lg:py-24 px-4 sm:px-8 lg:px-[70px] overflow-hidden">
-        {/* Decorative Wavy Line - Left Side */}
-        <svg 
+        {/* Decorative Vector SVG - Left Side */}
+        <div 
           className="absolute hidden lg:block pointer-events-none"
           style={{
-            width: '80px',
-            height: '100%',
+            left: '20px',
             top: '0',
-            left: '20px'
+            height: '100%',
+            transform: 'rotate(3.95deg)',
+            transformOrigin: 'top left',
+            width: 'auto',
+            zIndex: 1
           }}
-          viewBox="0 0 80 400"
-          fill="none"
-          preserveAspectRatio="none"
-          xmlns="http://www.w3.org/2000/svg"
         >
-          <path 
-            d="M 40 0 
-               C 80 50, 0 100, 40 150 
-               C 80 200, 0 250, 40 300 
-               C 80 350, 20 380, 40 400"
-            stroke="url(#upcomingWaveGradient)"
-            strokeWidth="30"
-            strokeLinecap="round"
-            fill="none"
+          <img
+            src={Vector}
+            alt="Decorative vector"
+            className="h-full w-auto"
+            style={{ 
+              maxWidth: '150px',
+              display: 'block'
+            }}
           />
-          <defs>
-            <linearGradient id="upcomingWaveGradient" x1="0%" y1="0%" x2="0%" y2="100%">
-              <stop offset="0%" stopColor="#A66D35" stopOpacity="0.2" />
-              <stop offset="50%" stopColor="#A66D35" stopOpacity="0.45" />
-              <stop offset="100%" stopColor="#A66D35" stopOpacity="0.5" />
-            </linearGradient>
-          </defs>
-        </svg>
+        </div>
 
         <div className="max-w-[1780px] mx-auto">
           <div className="flex flex-col lg:flex-row items-start gap-8 lg:gap-12">
@@ -269,13 +260,7 @@ const Accommodation = () => {
                 </p>
                 <div className="flex items-center gap-2 cursor-pointer group">
                   <div className="w-5 h-5 rounded-full bg-[#C17F24] flex items-center justify-center group-hover:bg-[#a66a1c] transition-colors duration-300">
-                    <svg 
-                      className="w-1.5 h-1.5 text-white ml-0.5" 
-                      fill="currentColor" 
-                      viewBox="0 0 24 24"
-                    >
-                      <path d="M8 5v14l11-7z"/>
-                    </svg>
+                    <img src={Arrow} alt="Arrow" className="w-3 h-3" />
                   </div>
                   <span className="text-[#2D2D2D] tracking-[0.15em] text-xs font-semibold group-hover:text-[#C17F24] transition-colors duration-300">
                     VIEW FORM
@@ -296,13 +281,7 @@ const Accommodation = () => {
                 </p>
                 <div className="flex items-center gap-2 cursor-pointer group">
                   <div className="w-5 h-5 rounded-full bg-[#C17F24] flex items-center justify-center group-hover:bg-[#a66a1c] transition-colors duration-300">
-                    <svg 
-                      className="w-1.5 h-1.5 text-white ml-0.5" 
-                      fill="currentColor" 
-                      viewBox="0 0 24 24"
-                    >
-                      <path d="M8 5v14l11-7z"/>
-                    </svg>
+                  <img src={Arrow} alt="Arrow" className="w-5 h-5" />
                   </div>
                   <span className="text-[#2D2D2D] tracking-[0.15em] text-xs font-semibold group-hover:text-[#C17F24] transition-colors duration-300">
                     VIEW FORM
@@ -323,13 +302,7 @@ const Accommodation = () => {
                 </p>
                 <div className="flex items-center gap-2 cursor-pointer group">
                   <div className="w-5 h-5 rounded-full bg-[#C17F24] flex items-center justify-center group-hover:bg-[#a66a1c] transition-colors duration-300">
-                    <svg 
-                      className="w-1.5 h-1.5 text-white ml-0.5" 
-                      fill="currentColor" 
-                      viewBox="0 0 24 24"
-                    >
-                      <path d="M8 5v14l11-7z"/>
-                    </svg>
+                  <img src={Arrow} alt="Arrow" className="w-5 h-5" />
                   </div>
                   <span className="text-[#2D2D2D] tracking-[0.15em] text-xs font-semibold group-hover:text-[#C17F24] transition-colors duration-300">
                     VIEW FORM
@@ -387,19 +360,7 @@ const Accommodation = () => {
 
             {/* Join Button */}
             <button className="flex items-center gap-3 bg-white rounded-full px-6 py-3 hover:bg-gray-50 transition-colors duration-300 shadow-sm">
-              <svg 
-                className="w-4 h-4 text-[#2D2D2D]" 
-                fill="none" 
-                stroke="currentColor" 
-                viewBox="0 0 24 24"
-              >
-                <path 
-                  strokeLinecap="round" 
-                  strokeLinejoin="round" 
-                  strokeWidth={2} 
-                  d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" 
-                />
-              </svg>
+              <img src={Join} alt="Join" className="w-5 h-5" />
               <span className="text-[#2D2D2D] tracking-[0.15em] text-xs font-semibold">
                 JOIN REPA RETREAT
               </span>

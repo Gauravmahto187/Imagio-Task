@@ -33,7 +33,7 @@ const Services = () => {
   return (
     <section className="w-full">
       {/* Services Banner & Programs */}
-      <div className="px-4 sm:px-8 lg:px-[70px] py-16 lg:py-20">
+      <div className="px-4 sm:px-8 lg:px-[70px] pt-32 sm:pt-40 lg:pt-48 pb-16 lg:pb-20">
         {/* Services Banner */}
         <div 
           className="relative w-full max-w-[1780px] mx-auto overflow-hidden"

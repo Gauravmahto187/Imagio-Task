@@ -92,6 +92,9 @@ const Navbar = () => {
           </button>
         </div>
       </div>
+      
+      {/* Horizontal Line Separator */}
+      <div className="absolute bottom-0 left-0 w-full border-b border-white/50"></div>
     </nav>
   )
 }

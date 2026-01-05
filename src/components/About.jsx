@@ -6,9 +6,9 @@ import aboutImage4 from '../assets/About-4.jpg'
 
 const About = () => {
   return (
-    <section className="relative w-full bg-white pt-16 lg:pt-20 pb-40 lg:pb-60 overflow-visible">
+    <section className="relative w-full bg-white pt-12 sm:pt-16 lg:pt-20 pb-32 sm:pb-40 lg:pb-60 overflow-visible">
       {/* Section Title */}
-      <p className="text-center text-[#C17F24] tracking-[0.25em] text-xs font-semibold mb-6">
+      <p className="text-center text-[#C17F24] tracking-[0.25em] text-xs font-semibold mb-6 px-4">
         ABOUT REPA RETREAT
       </p>
 
@@ -16,20 +16,20 @@ const About = () => {
       <div className="relative max-w-[600px] mx-auto text-center z-20 px-4">
         {/* Main Heading */}
         <h2 
-          className="text-4xl md:text-5xl text-[#2D2D2D] mb-2 leading-tight"
+          className="text-3xl sm:text-4xl md:text-5xl text-[#2D2D2D] mb-2 leading-tight"
           style={{ fontFamily: "'Cormorant Garamond', Georgia, serif" }}
         >
           Tranquil Sanctuary for
         </h2>
         <h3 
-          className="text-3xl md:text-4xl text-[#C17F24] mb-8 italic"
+          className="text-2xl sm:text-3xl md:text-4xl text-[#C17F24] mb-6 sm:mb-8 italic"
           style={{ fontFamily: "'Cormorant Garamond', Georgia, serif" }}
         >
           Meditation Retreats
         </h3>
 
         {/* Description */}
-        <p className="text-gray-500 text-sm leading-relaxed mb-8 max-w-[500px] mx-auto">
+        <p className="text-gray-500 text-sm sm:text-base leading-relaxed mb-6 sm:mb-8 max-w-[500px] mx-auto">
           Repa Retreat is an extraordinary place for meditation, healing and connecting. Its 
           tranquil and secluded location overlooking the Kathmandu valley makes it ideal for 
           both group retreats as well as solitary retreats.
@@ -52,11 +52,16 @@ const About = () => {
         </div>
       </div>
 
-      {/* Desktop Images */}
-      {/* Image 1 - Left Side (Indoor yoga scene) - 392x459 */}
+      {/* Desktop Images (xl: 1280px+) - Keep exact sizes */}
+      {/* Image 1 - Desktop */}
       <div 
-        className="absolute left-0 top-[100px] z-10 hidden xl:block overflow-hidden"
-        style={{ width: '280px', height: '350px' }}
+        className="absolute z-10 hidden xl:block overflow-hidden rounded-md"
+        style={{ 
+          left: '80px',
+          top: '200px',
+          width: '280px', 
+          height: '330px' 
+        }}
       >
         <img
           src={aboutImage1}
@@ -65,10 +70,15 @@ const About = () => {
         />
       </div>
 
-      {/* Image 2 - Right Side (Outdoor meditation with prayer flags) - 392x521 */}
+      {/* Image 2 - Desktop */}
       <div 
-        className="absolute right-0 top-[80px] z-10 hidden xl:block overflow-hidden rounded-l-3xl"
-        style={{ width: '300px', height: '380px' }}
+        className="absolute z-10 hidden xl:block overflow-hidden rounded-md"
+        style={{ 
+          right: '80px',
+          top: '120px',
+          width: '280px', 
+          height: '380px' 
+        }}
       >
         <img
           src={aboutImage2}
@@ -77,15 +87,14 @@ const About = () => {
         />
       </div>
 
-      {/* Image 3 - Bottom Center-Left (Buddha statue meditation) - rounded top */}
+      {/* Image 3 - Desktop */}
       <div 
-        className="absolute z-10 hidden xl:block overflow-hidden"
+        className="absolute z-10 hidden xl:block overflow-hidden rounded-md"
         style={{ 
-          width: '220px', 
-          height: '320px',
-          left: '28%',
-          bottom: '-80px',
-          borderRadius: '110px 110px 8px 8px'
+          left: '30%',
+          bottom: '-180px',
+          width: '250px', 
+          height: '350px'
         }}
       >
         <img
@@ -95,14 +104,14 @@ const About = () => {
         />
       </div>
 
-      {/* Image 4 - Bottom Center-Right (Outdoor group meditation) */}
+      {/* Image 4 - Desktop */}
       <div 
-        className="absolute z-10 hidden xl:block overflow-hidden rounded-lg"
+        className="absolute z-10 hidden xl:block overflow-hidden rounded-md"
         style={{ 
-          width: '250px', 
-          height: '300px',
-          right: '22%',
-          bottom: '-50px'
+          right: '30%',
+          bottom: '-100px',
+          width: '280px', 
+          height: '330px'
         }}
       >
         <img
@@ -112,46 +121,174 @@ const About = () => {
         />
       </div>
 
-      {/* Tablet Images (lg screens) */}
+      {/* Large Tablet Images (lg: 1024px - 1279px) - ~75% scale */}
+      {/* Image 1 - Large Tablet */}
       <div 
-        className="absolute left-0 top-[100px] z-10 hidden lg:block xl:hidden overflow-hidden"
-        style={{ width: '200px', height: '260px' }}
+        className="absolute z-10 hidden lg:block xl:hidden overflow-hidden rounded-md"
+        style={{ 
+          left: '40px',
+          top: '150px',
+          width: '210px', 
+          height: '248px' 
+        }}
       >
-        <img src={aboutImage1} alt="Indoor meditation" className="w-full h-full object-cover" />
-      </div>
-      <div 
-        className="absolute right-0 top-[80px] z-10 hidden lg:block xl:hidden overflow-hidden rounded-l-2xl"
-        style={{ width: '220px', height: '290px' }}
-      >
-        <img src={aboutImage2} alt="Outdoor meditation" className="w-full h-full object-cover" />
-      </div>
-      <div 
-        className="absolute z-10 hidden lg:block xl:hidden overflow-hidden"
-        style={{ width: '160px', height: '240px', left: '25%', bottom: '-60px', borderRadius: '80px 80px 8px 8px' }}
-      >
-        <img src={aboutImage3} alt="Buddha meditation" className="w-full h-full object-cover" />
-      </div>
-      <div 
-        className="absolute z-10 hidden lg:block xl:hidden overflow-hidden rounded-lg"
-        style={{ width: '180px', height: '220px', right: '18%', bottom: '-40px' }}
-      >
-        <img src={aboutImage4} alt="Group meditation" className="w-full h-full object-cover" />
+        <img
+          src={aboutImage1}
+          alt="Indoor meditation and yoga practice"
+          className="w-full h-full object-cover"
+        />
       </div>
 
-      {/* Mobile/Small Tablet Images Grid */}
-      <div className="lg:hidden mt-12 px-4">
+      {/* Image 2 - Large Tablet */}
+      <div 
+        className="absolute z-10 hidden lg:block xl:hidden overflow-hidden rounded-md"
+        style={{ 
+          right: '40px',
+          top: '90px',
+          width: '210px', 
+          height: '285px' 
+        }}
+      >
+        <img
+          src={aboutImage2}
+          alt="Outdoor meditation session with prayer flags"
+          className="w-full h-full object-cover"
+        />
+      </div>
+
+      {/* Image 3 - Large Tablet */}
+      <div 
+        className="absolute z-10 hidden lg:block xl:hidden overflow-hidden rounded-md"
+        style={{ 
+          left: '28%',
+          bottom: '-135px',
+          width: '188px', 
+          height: '263px'
+        }}
+      >
+        <img
+          src={aboutImage3}
+          alt="Meditation with Buddha statue"
+          className="w-full h-full object-cover"
+        />
+      </div>
+
+      {/* Image 4 - Large Tablet */}
+      <div 
+        className="absolute z-10 hidden lg:block xl:hidden overflow-hidden rounded-md"
+        style={{ 
+          right: '28%',
+          bottom: '-75px',
+          width: '210px', 
+          height: '248px'
+        }}
+      >
+        <img
+          src={aboutImage4}
+          alt="Outdoor group meditation session"
+          className="w-full h-full object-cover"
+        />
+      </div>
+
+      {/* Medium Tablet Images (md: 768px - 1023px) - ~60% scale */}
+      {/* Image 1 - Medium Tablet */}
+      <div 
+        className="absolute z-10 hidden md:block lg:hidden overflow-hidden rounded-md"
+        style={{ 
+          left: '20px',
+          top: '120px',
+          width: '168px', 
+          height: '198px' 
+        }}
+      >
+        <img
+          src={aboutImage1}
+          alt="Indoor meditation and yoga practice"
+          className="w-full h-full object-cover"
+        />
+      </div>
+
+      {/* Image 2 - Medium Tablet */}
+      <div 
+        className="absolute z-10 hidden md:block lg:hidden overflow-hidden rounded-md"
+        style={{ 
+          right: '20px',
+          top: '70px',
+          width: '168px', 
+          height: '228px' 
+        }}
+      >
+        <img
+          src={aboutImage2}
+          alt="Outdoor meditation session with prayer flags"
+          className="w-full h-full object-cover"
+        />
+      </div>
+
+      {/* Image 3 - Medium Tablet */}
+      <div 
+        className="absolute z-10 hidden md:block lg:hidden overflow-hidden rounded-md"
+        style={{ 
+          left: '25%',
+          bottom: '-108px',
+          width: '150px', 
+          height: '210px'
+        }}
+      >
+        <img
+          src={aboutImage3}
+          alt="Meditation with Buddha statue"
+          className="w-full h-full object-cover"
+        />
+      </div>
+
+      {/* Image 4 - Medium Tablet */}
+      <div 
+        className="absolute z-10 hidden md:block lg:hidden overflow-hidden rounded-md"
+        style={{ 
+          right: '25%',
+          bottom: '-60px',
+          width: '168px', 
+          height: '198px'
+        }}
+      >
+        <img
+          src={aboutImage4}
+          alt="Outdoor group meditation session"
+          className="w-full h-full object-cover"
+        />
+      </div>
+
+      {/* Mobile/Small Tablet Images Grid (below md) */}
+      <div className="md:hidden mt-12 px-4">
         <div className="grid grid-cols-2 gap-4 max-w-lg mx-auto">
-          <div className="rounded-lg overflow-hidden">
-            <img src={aboutImage1} alt="Indoor meditation" className="w-full h-48 object-cover" />
+          <div className="rounded-md overflow-hidden shadow-md">
+            <img 
+              src={aboutImage1} 
+              alt="Indoor meditation" 
+              className="w-full h-48 sm:h-56 object-cover" 
+            />
           </div>
-          <div className="rounded-lg overflow-hidden">
-            <img src={aboutImage2} alt="Outdoor meditation" className="w-full h-48 object-cover" />
+          <div className="rounded-md overflow-hidden shadow-md">
+            <img 
+              src={aboutImage2} 
+              alt="Outdoor meditation" 
+              className="w-full h-48 sm:h-56 object-cover" 
+            />
           </div>
-          <div className="rounded-t-full rounded-b-lg overflow-hidden">
-            <img src={aboutImage3} alt="Buddha meditation" className="w-full h-56 object-cover" />
+          <div className="rounded-md overflow-hidden shadow-md">
+            <img 
+              src={aboutImage3} 
+              alt="Buddha meditation" 
+              className="w-full h-56 sm:h-64 object-cover" 
+            />
           </div>
-          <div className="rounded-lg overflow-hidden">
-            <img src={aboutImage4} alt="Group meditation" className="w-full h-56 object-cover" />
+          <div className="rounded-md overflow-hidden shadow-md">
+            <img 
+              src={aboutImage4} 
+              alt="Group meditation" 
+              className="w-full h-56 sm:h-64 object-cover" 
+            />
           </div>
         </div>
       </div>

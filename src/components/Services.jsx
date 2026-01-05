@@ -4,6 +4,7 @@ import service1Image from '../assets/Service-1.jpg'
 import service2Image from '../assets/Service-2.jpg'
 import service3Image from '../assets/Service-3.jpg'
 import logoImage from '../assets/Nav-repa-logo.png'
+import Arrow from '../assets/Arrow.png'
 
 const Services = () => {
   const programs = [
@@ -33,7 +34,7 @@ const Services = () => {
   return (
     <section className="w-full">
       {/* Services Banner & Programs */}
-      <div className="px-4 sm:px-8 lg:px-[70px] pt-32 sm:pt-40 lg:pt-48 pb-16 lg:pb-20">
+      <div className="px-4 sm:px-8 lg:px-[70px] lg:pt-64 pb-16 lg:pb-20">
         {/* Services Banner */}
         <div 
           className="relative w-full max-w-[1780px] mx-auto overflow-hidden"
@@ -78,14 +79,8 @@ const Services = () => {
 
               {/* View All Services Button */}
               <button className="flex items-center gap-3 bg-white rounded-full px-6 py-3 hover:bg-gray-100 transition-colors duration-300 w-fit">
-                <div className="w-6 h-6 rounded-full bg-[#C17F24] flex items-center justify-center">
-                  <svg 
-                    className="w-2.5 h-2.5 text-white ml-0.5" 
-                    fill="currentColor" 
-                    viewBox="0 0 24 24"
-                  >
-                    <path d="M8 5v14l11-7z"/>
-                  </svg>
+                <div className="w-6 h-6  flex items-center justify-center">
+                 <img src={Arrow} alt="Arrow" className="w-6 h-6" />
                 </div>
                 <span className="text-[#2D2D2D] tracking-[0.15em] text-xs font-semibold">
                   VIEW ALL SERVICES
@@ -128,14 +123,8 @@ const Services = () => {
 
                 {/* Learn More Button */}
                 <div className="flex items-center gap-3 cursor-pointer group">
-                  <div className="w-6 h-6 rounded-full bg-[#C17F24] flex items-center justify-center group-hover:bg-[#a66a1c] transition-colors duration-300">
-                    <svg 
-                      className="w-2 h-2 text-white ml-0.5" 
-                      fill="currentColor" 
-                      viewBox="0 0 24 24"
-                    >
-                      <path d="M8 5v14l11-7z"/>
-                    </svg>
+                  <div className="w-6 h-6  flex items-center justify-center ">
+                    <img src={Arrow} alt="Arrow" className="w-6 h-6" />
                   </div>
                   <span className="text-[#2D2D2D] tracking-[0.15em] text-xs font-semibold group-hover:text-[#C17F24] transition-colors duration-300">
                     LEARN MORE

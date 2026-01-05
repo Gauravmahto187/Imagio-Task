@@ -3,6 +3,7 @@ import aboutImage1 from '../assets/About-1.jpg'
 import aboutImage2 from '../assets/About-2.jpg'
 import aboutImage3 from '../assets/About-3.jpg'
 import aboutImage4 from '../assets/About-4.jpg'
+import Arrow from '../assets/Arrow.png'
 
 const About = () => {
   return (
@@ -16,20 +17,19 @@ const About = () => {
       <div className="relative max-w-[600px] mx-auto text-center z-20 px-4">
         {/* Main Heading */}
         <h2 
-          className="text-3xl sm:text-4xl md:text-5xl text-[#2D2D2D] mb-2 leading-tight"
-          style={{ fontFamily: "'Cormorant Garamond', Georgia, serif" }}
+          className="text-3xl sm:text-4xl md:text-5xl text-[#2D2D2D] mb-2"
+          style={{ fontFamily: "Canela Trial" }}
         >
           Tranquil Sanctuary for
+          <br />
+          <span className="text-2xl sm:text-3xl md:text-4xl italic font-thin">
+            Meditation Retreats
+          </span>
         </h2>
-        <h3 
-          className="text-2xl sm:text-3xl md:text-4xl text-[#C17F24] mb-6 sm:mb-8 italic"
-          style={{ fontFamily: "'Cormorant Garamond', Georgia, serif" }}
-        >
-          Meditation Retreats
-        </h3>
+        
 
         {/* Description */}
-        <p className="text-gray-500 text-sm sm:text-base leading-relaxed mb-6 sm:mb-8 max-w-[500px] mx-auto">
+        <p className="text-gray-500 text-sm sm:text-base leading-relaxed mb-6 sm:mb-8 max-w-[500px] mx-auto"  style={{ fontFamily: "Inter" }}>
           Repa Retreat is an extraordinary place for meditation, healing and connecting. Its 
           tranquil and secluded location overlooking the Kathmandu valley makes it ideal for 
           both group retreats as well as solitary retreats.
@@ -37,22 +37,15 @@ const About = () => {
 
         {/* Learn More Button */}
         <div className="flex items-center justify-center gap-3 cursor-pointer group">
-          <div className="w-7 h-7 rounded-full border-2 border-[#C17F24] flex items-center justify-center group-hover:bg-[#C17F24] transition-colors duration-300">
-            <svg 
-              className="w-2.5 h-2.5 text-[#C17F24] group-hover:text-white transition-colors duration-300 ml-0.5" 
-              fill="currentColor" 
-              viewBox="0 0 24 24"
-            >
-              <path d="M8 5v14l11-7z"/>
-            </svg>
+          <div className="w-7 h-7  flex items-center justify-center">
+            <img src={Arrow} alt="Arrow" className="w-6 h-6" />
           </div>
-          <span className="text-[#2D2D2D] tracking-[0.2em] text-xs font-semibold">
+          <span className="text-black tracking-[0.2em] text-xs font-semibold">
             LEARN MORE
           </span>
         </div>
       </div>
 
-      {/* Desktop Images (xl: 1280px+) - Keep exact sizes */}
       {/* Image 1 - Desktop */}
       <div 
         className="absolute z-10 hidden xl:block overflow-hidden rounded-md"
@@ -121,7 +114,6 @@ const About = () => {
         />
       </div>
 
-      {/* Large Tablet Images (lg: 1024px - 1279px) - ~75% scale */}
       {/* Image 1 - Large Tablet */}
       <div 
         className="absolute z-10 hidden lg:block xl:hidden overflow-hidden rounded-md"

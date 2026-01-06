@@ -1,9 +1,9 @@
 import React from 'react'
 import logoImage from '../assets/Nav-repa-logo.png'
 import vectorSvg from '../assets/Vector.svg'
-import Facebook from '../assets/Facebook.png'
+import Facebook from '../assets/facebook.png'
 import Instagram from '../assets/Instagram.png'
-import YouTube from '../assets/YouTube.png'
+import YouTube from '../assets/Youtube.png'
 
 const Footer = () => {
   const scrollToTop = () => {
